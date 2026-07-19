@@ -33,9 +33,15 @@
     <a href="#-developer-execution-guide"><b>Execution Guide</b></a>
   </p>
 
-  <sub>Engineering diagnostic accuracy for field clinicians, healthcare workers, and global health organizations.</sub>
-
 </div>
+
+<br />
+
+> [!NOTE]
+> ### 💡 Platform Highlights
+> - **Biometric Intelligence:** On-device computer vision analyzing anatomical wasting markers in real-time.
+> - **WHO Matrix Normalization:** Automated computation of **WHZ**, **HAZ**, and **WAZ** standard statistical scores.
+> - **Edge Serverless Infrastructure:** Sub-millisecond global execution powered by **Hono.js** and **Cloudflare D1**.
 
 <br />
 
@@ -43,32 +49,25 @@
 
 ## ⚡ Executive Summary
 
-Malnutrition in early childhood remains a critical global health challenge. In resource-constrained clinical settings, early visual wasting indicators are frequently overlooked due to subtle physical manifestations and manual Z-score calculation burdens.
+Childhood malnutrition represents a critical global healthcare emergency. In field clinics and low-resource medical environments, early wasting indicators frequently go undetected due to subtle physical manifestations and manual z-score calculation workloads.
 
-**NutriScan AI** bridges this critical healthcare gap by converting standard webcams and smartphone cameras into an **AI-assisted biometric diagnostic workstation**. Fusing on-device pose estimation with official **WHO Child Growth Standards** and **Google Gemini AI** clinical reasoning, the system generates instant, reliable anthropometric assessments and custom therapeutic nutrition protocols.
+**NutriScan AI** transforms everyday webcams and mobile cameras into a **high-precision clinical diagnostic suite**. Combining client-side pose estimation with official **WHO Growth Standards** and **Google Gemini AI** clinical reasoning, NutriScan AI empowers medical staff with instant diagnostic clarity.
 
 <br />
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top" style="background-color: #1a1016;">
-      <h3 align="center">🚨 The Clinical Challenge</h3>
-      <ul>
-        <li><b>Undetected Wasting:</b> Early-stage acute malnutrition (limb thinning, facial muscle atrophy) often escapes conventional observation.</li>
-        <li><b>Manual Calculation Errors:</b> Human miscalculations in WHZ/HAZ/WAZ Z-score tables leading to misclassified triage urgency.</li>
-        <li><b>Data Fragmentations:</b> Difficulty maintaining longitudinal patient growth curves during multi-week therapeutic feeding cycles.</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top" style="background-color: #0c1a1a;">
-      <h3 align="center">🛡️ The NutriScan AI Solution</h3>
-      <ul>
-        <li><b>Biometric Computer Vision:</b> Sub-millimeter anatomical landmark extraction using TensorFlow.js (MoveNet/MobileNet) directly in browser.</li>
-        <li><b>Automated WHO Engine:</b> Instant math computation of Z-scores with automatic triaging into SAM, MAM, or Normal classifications.</li>
-        <li><b>Generative Diet Blueprints:</b> Tailored therapeutic feeding protocols (RUTF, F75, F100) generated via Gemini AI reasoning.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+> [!CAUTION]
+> ### 🚨 The Clinical Challenge
+> - **Undetected Wasting:** Early-stage acute malnutrition (limb circumference loss, subtle rib prominence) slips past routine visual inspection.
+> - **Manual Calculation Errors:** Human error during manual WHO growth chart cross-referencing causes misclassified triage priority.
+> - **Fragmented Tracking:** High drop-off rate during multi-week therapeutic feeding recovery cycles.
+
+<br />
+
+> [!TIP]
+> ### 🛡️ The NutriScan AI Solution
+> - **Biometric Vision Scan:** Sub-millimeter landmark extraction via `TensorFlow.js` running 100% locally in-browser for total patient privacy.
+> - **Automated WHO Engine:** Instant mathematical evaluation of Z-scores with automatic triaging into ![SAM](https://img.shields.io/badge/SAM-Severe_Malnutrition-DC2626?style=flat-square), ![MAM](https://img.shields.io/badge/MAM-Moderate_Malnutrition-F59E0B?style=flat-square), or ![NORMAL](https://img.shields.io/badge/NORMAL-Healthy-10B981?style=flat-square).
+> - **Generative Diet Blueprints:** Tailored therapeutic feeding protocols (`RUTF`, `F75`, `F100`) synthesized via `Google Gemini 2.0` AI reasoning.
 
 <br />
 
@@ -79,30 +78,30 @@ Malnutrition in early childhood remains a critical global health challenge. In r
 <br />
 
 ### 🔍 1. Biometric Computer Vision Engine
-* **Anatomical Landmark Scan:** Extracts key physical points to measure limb proportions, rib cage prominence, and facial tissue volume.
-* **Privacy-Preserving Execution:** Runs entirely on-device via TensorFlow.js. Zero patient imagery leaves the local browser terminal.
-* **Lighting & Angle Auto-Validation:** Ensures optical capture quality satisfies clinical accuracy threshold before diagnostic evaluation.
+> [!IMPORTANT]
+> **Privacy-First On-Device AI Execution**  
+> All computer vision processing happens on the client device using `TensorFlow.js` (`MoveNet` / `MobileNet`). Zero patient images are uploaded or transmitted.
+
+* **Anatomical Landmark Extraction:** Measures limb ratios, rib cage prominence, and facial tissue volume.
+* **Optical Quality Validation:** Automatically assesses ambient lighting and camera angle before starting diagnostics.
 
 <br />
 
 ### 📐 2. Precision WHO Anthropometric Calculator
-* **Multi-Vector Z-Scores:** Simultaneously evaluates **WHZ** (Weight-for-Height), **HAZ** (Height-for-Age), and **WAZ** (Weight-for-Age).
-* **Instant Risk Triaging:** Automates categorization into **SAM** (Severe Acute Malnutrition), **MAM** (Moderate Acute Malnutrition), or **Normal**.
-* **Confidence Rating:** Outputs a statistical confidence score and diagnostic rationale breakdown for clinician verification.
+* **Multi-Vector Normalization:** Evaluates ![WHZ](https://img.shields.io/badge/WHZ-Weight_for_Height-06B6D4?style=flat-square) ![HAZ](https://img.shields.io/badge/HAZ-Height_for_Age-8B5CF6?style=flat-square) ![WAZ](https://img.shields.io/badge/WAZ-Weight_for_Age-EC4899?style=flat-square) scores simultaneously.
+* **Confidence Scoring:** Outputs statistical confidence metrics alongside full clinical logic breakdowns.
 
 <br />
 
 ### 🍱 3. Generative Therapeutic Nutrition Generator
-* **Protocol Synthesis:** Leverages Google Gemini 2.0 API to formulate customized caloric intake targets and micronutrient schedules.
-* **WHO Dietary Formulations:** Recommends specific ready-to-use therapeutic food plans including **RUTF**, **F-75**, and **F-100** milk diets.
-* **Longitudinal Cycle Rules:** Calculates intervention duration, dietary restriction flags, and scheduled follow-up milestones.
+* **AI Clinical Synthesis:** Leverages `Google Gemini 2.0` to generate customized caloric, fluid, and micronutrient schedules.
+* **WHO Therapeutic Standards:** Formulates specific feeding plans featuring ![RUTF](https://img.shields.io/badge/RUTF-Ready_to_Use_Food-FF6B00?style=flat-square), ![F75](https://img.shields.io/badge/F75-Therapeutic_Milk-10B981?style=flat-square), and ![F100](https://img.shields.io/badge/F100-Rehab_Milk-06B6D4?style=flat-square).
 
 <br />
 
 ### 📄 4. Clinical Export & Patient History Hub
-* **PDF Report Generation:** Serverless Headless Chrome via `Puppeteer` compiles diagnostic certificates, patient details, and growth charts.
-* **Edge Storage Hub:** Relational patient database built on Cloudflare D1 (SQLite) with type-safe Kysely ORM queries.
-* **Longitudinal Trends:** Visualizes historical recovery trajectories to track treatment efficacy over time.
+* **PDF Report Compiler:** Serverless Headless Chrome via `Puppeteer` builds print-ready medical records.
+* **Edge Relational Database:** High-speed patient record storage on `Cloudflare D1` (SQLite) via type-safe `Kysely` queries.
 
 <br />
 
@@ -110,17 +109,17 @@ Malnutrition in early childhood remains a critical global health challenge. In r
 
 ## 📐 Diagnostic Classification Matrix
 
-NutriScan AI evaluates anthropometric inputs against standardized **WHO Child Growth Matrices (0–60 Months)** to instantly compute patient severity:
+NutriScan AI evaluates patient anthropometrics against standardized **WHO Growth Matrices (0–60 Months)**:
 
 <div align="center">
 
-| Metric Index | Target Indicator | Severity Threshold | Triage Status | Clinical Action Required |
+| Metric Index | Target Indicator | Severity Threshold | Triage Status | Clinical Action Plan |
 | :---: | :---: | :---: | :---: | :--- |
-| **WHZ** | Weight-for-Height | `< -3 SD` | <img src="https://img.shields.io/badge/CRITICAL-SAM-DC2626?style=for-the-badge" alt="SAM"> | Immediate Inpatient / Outpatient RUTF & Medical Protocol |
-| **WHZ** | Weight-for-Height | `-3 SD to -2 SD` | <img src="https://img.shields.io/badge/WARNING-MAM-F59E0B?style=for-the-badge" alt="MAM"> | Targeted Supplementary Feeding & Bi-weekly Monitoring |
-| **HAZ** | Height-for-Age | `< -2 SD` | <img src="https://img.shields.io/badge/ALERT-STUNTING-8B5CF6?style=for-the-badge" alt="Stunting"> | Chronic Malnutrition Protocol & Micronutrient Therapy |
-| **WAZ** | Weight-for-Age | `< -2 SD` | <img src="https://img.shields.io/badge/NOTICE-UNDERWEIGHT-06B6D4?style=for-the-badge" alt="Underweight"> | Comprehensive Nutritional Support & Growth Tracking |
-| **WHZ** | Weight-for-Height | `>= -2 SD` | <img src="https://img.shields.io/badge/OPTIMAL-NORMAL-10B981?style=for-the-badge" alt="Normal"> | Routine Wellness Check & Standard Pediatric Diet |
+| **WHZ** | Weight-for-Height | `< -3 SD` | ![SAM](https://img.shields.io/badge/CRITICAL-SAM-DC2626?style=for-the-badge) | Immediate Outpatient / Inpatient RUTF Medical Protocol |
+| **WHZ** | Weight-for-Height | `-3 SD to -2 SD` | ![MAM](https://img.shields.io/badge/WARNING-MAM-F59E0B?style=for-the-badge) | Targeted Supplementary Feeding & Bi-weekly Checkups |
+| **HAZ** | Height-for-Age | `< -2 SD` | ![STUNTING](https://img.shields.io/badge/ALERT-STUNTING-8B5CF6?style=for-the-badge) | Chronic Stunting Intervention & Micronutrient Protocol |
+| **WAZ** | Weight-for-Age | `< -2 SD` | ![UNDERWEIGHT](https://img.shields.io/badge/NOTICE-UNDERWEIGHT-06B6D4?style=for-the-badge) | Pediatric Caloric Supplementation & Growth Tracking |
+| **WHZ** | Weight-for-Height | `>= -2 SD` | ![NORMAL](https://img.shields.io/badge/OPTIMAL-NORMAL-10B981?style=for-the-badge) | Routine Standard Pediatric Care & Monitoring |
 
 </div>
 
@@ -130,51 +129,49 @@ NutriScan AI evaluates anthropometric inputs against standardized **WHO Child Gr
 
 ## 🏗️ System Architecture
 
-The following diagram illustrates the complete end-to-end data pipeline:
-
 ```mermaid
 flowchart TD
-    %% Custom Vibrant Node Styling
-    classDef client fill:#0f172a,stroke:#06B6D4,stroke-width:2px,color:#fff;
-    classDef edge fill:#1e1b4b,stroke:#8B5CF6,stroke-width:2px,color:#fff;
-    classDef ai fill:#27005D,stroke:#EC4899,stroke-width:2px,color:#fff;
-    classDef persistence fill:#064E3B,stroke:#10B981,stroke-width:2px,color:#fff;
+    %% Custom Colored Nodes
+    classDef client fill:#0F172A,stroke:#06B6D4,stroke-width:2px,color:#F8FAFC;
+    classDef edge fill:#1E1B4B,stroke:#8B5CF6,stroke-width:2px,color:#F8FAFC;
+    classDef ai fill:#27005D,stroke:#EC4899,stroke-width:2px,color:#F8FAFC;
+    classDef storage fill:#064E3B,stroke:#10B981,stroke-width:2px,color:#F8FAFC;
 
     subgraph Client ["💻 Client Terminal (Browser / Camera)"]
-        Cam["📷 Optical Video Acquisition"]
+        Cam["📷 Optical Capture Engine"]
         TFJS["⚡ TensorFlow.js Landmark Detection"]
-        Privacy["🔒 Privacy Guard (On-Device Extraction)"]
+        Privacy["🔒 Privacy Guard (Local Processing)"]
         Cam --> TFJS --> Privacy
     end
 
     subgraph EdgeGateway ["🌐 Cloudflare Workers Edge Network"]
         Hono["🔥 Hono.js Router & Middleware"]
         WHOEngine["📐 WHO Z-Score Analytics (WHZ / HAZ / WAZ)"]
-        TriageEngine["🏷️ Severity Classification (SAM / MAM / Normal)"]
+        TriageEngine["🏷️ Severity Triaging (SAM / MAM / Normal)"]
         Hono --> WHOEngine --> TriageEngine
     end
 
-    subgraph Intelligence ["🧠 AI Clinical Synthesis"]
-        Gemini["✨ Google Gemini 2.0 API"]
-        DietPlanner["🍱 Therapeutic Diet & Blueprint Generator"]
+    subgraph Intelligence ["🧠 AI Synthesis Engine"]
+        Gemini["✨ Google Gemini 2.0 LLM"]
+        DietPlanner["🍱 Therapeutic Diet Blueprint Generator"]
         Gemini --> DietPlanner
     end
 
     subgraph Storage ["🗄️ Persistence & Document Engine"]
         D1[("🗃️ Cloudflare D1 SQLite Database")]
-        Puppeteer["📄 Puppeteer PDF Export"]
+        Puppeteer["📄 Puppeteer PDF Export Engine"]
     end
 
     Privacy -->|Extracted Biometric Vectors| Hono
     TriageEngine -->|Diagnostic Context Payload| Gemini
-    DietPlanner -->|Nutritional Plan| Hono
+    DietPlanner -->|Nutritional Blueprint| Hono
     Hono -->|Structured Patient Record| D1
-    Hono -->|Export Request| Puppeteer
+    Hono -->|Export Task| Puppeteer
 
     class Client client;
     class EdgeGateway edge;
     class Intelligence ai;
-    class Storage persistence;
+    class Storage storage;
 ```
 
 <br />
@@ -185,15 +182,15 @@ flowchart TD
 
 <div align="center">
 
-| Ecosystem Layer | Core Technology | Primary Functionality | Color Key |
+| System Layer | Technology | Function in NutriScan AI | Palette |
 | :--- | :--- | :--- | :---: |
-| **App & Runtime** | ![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white) ![Hono](https://img.shields.io/badge/Hono_v4-E36002?style=flat-square&logo=hono&logoColor=white) | Sub-millisecond serverless routing & Vite build system | `🔥 Orange / Blue` |
-| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript_5.0-3178C6?style=flat-square&logo=typescript&logoColor=white) | Strict end-to-end type safety across API & Database | `⚡ Royal Blue` |
-| **Computer Vision** | ![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) | Pose estimation & anatomical landmark extraction | `🧠 Amber` |
-| **Generative AI** | ![Google Gemini](https://img.shields.io/badge/Google_Gemini_AI-4285F4?style=flat-square&logo=googlegemini&logoColor=white) | AI-assisted medical reasoning & dietary synthesis | `✨ Vibrant Blue` |
-| **Edge Storage** | ![Cloudflare D1](https://img.shields.io/badge/Cloudflare_D1-F38020?style=flat-square&logo=cloudflare&logoColor=white) | Global serverless relational SQLite database | `🌐 Cloudflare Orange` |
-| **Document Export** | ![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white) | High-resolution PDF clinical report compiler | `📄 Mint Teal` |
-| **Clinical Standard** | ![WHO](https://img.shields.io/badge/WHO_Growth_Standards-008080?style=flat-square&logo=worldhealthorganization&logoColor=white) | Standardized WHO growth charts (0–60 Months) | `🩺 Deep Teal` |
+| **Framework & Runtime** | ![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white) ![Hono](https://img.shields.io/badge/Hono_v4-E36002?style=flat-square&logo=hono&logoColor=white) | Sub-millisecond serverless API route handler | `🔥 Orange` |
+| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript_5.0-3178C6?style=flat-square&logo=typescript&logoColor=white) | Strict type safety across client, edge & database | `⚡ Blue` |
+| **Computer Vision** | ![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) | On-device anatomical pose landmark tracking | `🧠 Amber` |
+| **Generative AI** | ![Google Gemini](https://img.shields.io/badge/Google_Gemini_AI-4285F4?style=flat-square&logo=googlegemini&logoColor=white) | Clinical reasoning & meal blueprint synthesis | `✨ Cyan` |
+| **Database** | ![Cloudflare D1](https://img.shields.io/badge/Cloudflare_D1-F38020?style=flat-square&logo=cloudflare&logoColor=white) | Edge serverless relational SQLite data store | `🌐 Orange` |
+| **Document Export** | ![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white) | High-fidelity clinical PDF certificate generation | `📄 Green` |
+| **Clinical Base** | ![WHO](https://img.shields.io/badge/WHO_Growth_Standards-008080?style=flat-square&logo=worldhealthorganization&logoColor=white) | Official WHO child growth reference matrices | `🩺 Teal` |
 
 </div>
 
@@ -203,47 +200,42 @@ flowchart TD
 
 ## 💻 Developer & Execution Guide
 
-### Environment Prerequisites
-* **Node.js**: `v18.0.0` or higher
-* **Package Manager**: `npm` v9+
-* **Cloudflare CLI**: `wrangler` v4+
-
----
-
-### Step-by-Step Local Quickstart
+### Local Environment Setup
 
 ```bash
 # 1. Clone the project repository
 git clone https://github.com/your-username/nutriscan-ai.git
 cd nutriscan-ai
 
-# 2. Install all required dependencies
+# 2. Install all dependencies
 npm install
 
-# 3. Set up environment variables (.env)
+# 3. Configure local environment variables (.env)
 echo "GEMINI_API_KEY=your_google_gemini_api_key" > .env
 
-# 4. Initialize local SQLite D1 database and seed test dataset
+# 4. Apply local D1 database migrations & seed dataset
 npm run db:migrate:local
 npm run db:seed
 
-# 5. Start the local Vite development server
+# 5. Launch Vite development server
 npm run dev
 ```
 
-> Access the interactive terminal at **`http://localhost:5173`**
+> Open interactive client suite at **`http://localhost:5173`**
 
 ---
 
-### Command Palette Reference
+### Command Reference
 
-```bash
-npm run dev               # Start local Vite development server
-npm run dev:sandbox       # Start local Wrangler Pages sandbox with D1 SQLite bindings
-npm run build             # Build production static bundle
-npm run db:migrate:local  # Apply migrations to local D1 database
-npm run db:migrate:prod   # Apply migrations to production Cloudflare D1
-npm run deploy            # Build and deploy directly to Cloudflare Pages
+```json
+{
+  "npm run dev": "Start Vite local development server",
+  "npm run dev:sandbox": "Run Cloudflare Pages sandbox environment with local D1 bindings",
+  "npm run build": "Compile application assets for production deployment",
+  "npm run db:migrate:local": "Apply migrations to local SQLite D1 database",
+  "npm run db:migrate:prod": "Apply migrations to production Cloudflare D1 database",
+  "npm run deploy": "Build and deploy directly to Cloudflare Pages"
+}
 ```
 
 <br />
@@ -264,7 +256,7 @@ npm run deploy            # Build and deploy directly to Cloudflare Pages
   <p><b>Transforming Optical Sensors into Life-Saving Biometric Diagnostic Tools</b></p>
 
   <p>
-    Built with passion for pediatric health equity across underserved global communities.
+    Built with dedication for pediatric health equity across global health communities.
   </p>
 
   <sub>© NutriScan AI • Powered by Hono, TensorFlow.js, Google Gemini & Cloudflare Workers</sub>
